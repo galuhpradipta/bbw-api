@@ -37,7 +37,7 @@ $ docker-compose up
 
 ###  Generate Auth Token
 ```sh
-- Request
+[Request]
 $ curl --location --request POST 'http://localhost:8080/oauth/token' \
     --header 'Content-Type: application/x-www-form-urlencoded' \
     --header 'Authorization: Basic YmJ3dXNlcjpiYndwYXNzd29yZA==' \
@@ -45,6 +45,7 @@ $ curl --location --request POST 'http://localhost:8080/oauth/token' \
 ```
 
 ```json
+[Response]
 {
     "auth_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJiYnciLCJleHAiOjE2MDkyOTAwOTd9.i3mR2F88Th_2C-v4LoYIf40iFebvm2bwV0c7zZd4O6o",
     "token_type": "Bearer",
@@ -55,7 +56,7 @@ $ curl --location --request POST 'http://localhost:8080/oauth/token' \
 
 ###  Inquiry Virtual Account
 ```sh
-- Request
+[Request]
 $ curl --location --request POST 'http://localhost:8080/va/inquiry' \
     --header 'Content-Type: application/json' \
     --header 'X-BBW-Timestamp: 2020-12-29T22:23:35.640Z' \
@@ -68,6 +69,7 @@ $ curl --location --request POST 'http://localhost:8080/va/inquiry' \
     }'
 ```
 ```json
+[Response]
 {
     "rc": "000",
     "message": "Success",
@@ -79,7 +81,7 @@ $ curl --location --request POST 'http://localhost:8080/va/inquiry' \
 
 ###  Payment Virtual Account
 ```sh
-- Request
+[Request]
 $ curl --location --request POST 'http://localhost:8080/va/payment' \
     --header 'Content-Type: application/json' \
     --header 'X-BBW-Timestamp: 2020-12-29T22:23:35.640Z' \
@@ -94,6 +96,7 @@ $ curl --location --request POST 'http://localhost:8080/va/payment' \
     }'
 ```
 ```json
+[Response]
 {
     "rc": "000",
     "message": "Success",
@@ -102,11 +105,6 @@ $ curl --location --request POST 'http://localhost:8080/va/payment' \
     }
 }
 ```
-
-
-
-
-
 
 
 
